@@ -33,3 +33,119 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+body {
+  padding-top: 50px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-gap: 15px;
+  padding: 15px;
+}
+
+.image-item {
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.image-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.image-item:hover img {
+  transform: scale(1.05);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.text-container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: #ededed;
+  padding: 5px 0;
+  font-size: 14px;
+  background-color: rgba(0, 0, 0, 0.534);
+  gap: 40px;
+}
+
+.text-derection {
+  padding: 0 5px;
+}
+
+.text-decoration {
+  font-weight: 550;
+}
+
+/* Стилі для повідомлення про кінець результатів */
+.end-message.none {
+  display: none;
+}
+
+.end-message {
+  text-align: center;
+  margin-top: 20px;
+  color: #f4f0f0;
+  padding: 20px;
+  margin-top: 20px;
+  font-size: 20px;
+  background-color: rgba(63, 53, 142, 0.867);
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-form {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(63, 53, 142, 0.867);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  left: 0;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  border-radius: 3px;
+  border: none;
+}
+
+.search-form input[type='text'] {
+  padding: 5px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+}
+
+.search-form button {
+  padding: 5px 15px;
+  background-color: rgb(10, 157, 30);
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.search-form button:hover {
+  background-color: rgb(125, 246, 116);
+}
+
+.search-field {
+  display: flex;
+  gap: 2px;
+}
